@@ -1,0 +1,20 @@
+{
+  "name": "restapiexample_mvc",
+  "version": "1.0.0",
+  "description": "Sample RestAPI with MVC Design Pattern",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Serbay ACAR ( serbayacar@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.3",
+    "npm": "^6.0.0",
+    "url": "^0.11.0"
+  }
+}
