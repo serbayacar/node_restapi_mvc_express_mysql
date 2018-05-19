@@ -81,7 +81,7 @@ After clone or download this repos,
 
 
 ```shell
-$ cd path/for/application/folder
+$ cd path/for/application/root/folder
 $ npm install
 ```
 
@@ -91,7 +91,7 @@ After clone or download this repos,
 With CMD,
 
 ```shell
-$ cd path/for/application/folder
+$ cd path/for/application/root/folder
 $ npm install
 ```
 
@@ -118,7 +118,7 @@ To start server ,
 2. Go to application folder and start server,
 
 ```shell
-$ cd path/for/application/folder
+$ cd path/for/application/root/folder
 $ npm start
 ```
 ##### Windows
@@ -129,6 +129,6 @@ To start server ,
 2. Go to application folder and start server,
 
 ```shell
-$ cd path/for/application/folder
+$ cd path/for/application/root/folder
 $ npm start
 ```
