@@ -1,6 +1,6 @@
 # RestFull API with NodeJS + Express + MVC + MySQL
 
-A [Sublime Text 2/3](http://www.sublimetext.com) project to train people who is new developer about RestAPI and NodeJS .
+The project to train people who is new developer about RestAPI and NodeJS .
 
 
 ##### Main Features

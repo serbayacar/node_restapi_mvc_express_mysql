@@ -1055,5 +1055,85 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>README</title></head><body><article class="markdown-body"><h1 id="node_restapi_mvc_express_mysql">node_restapi_mvc_express_mysql<a class="headerlink" href="#node_restapi_mvc_express_mysql" title="Permanent link"></a></h1>
-<p>RestAPI Example With NodeJS  + Express + MVC Design Pattern + MySQL</p></article></body></html>
+</style><title>README</title></head><body><article class="markdown-body"><h1 id="restfull-api-with-nodejs-express-mvc-mysql">RestFull API with NodeJS + Express + MVC + MySQL<a class="headerlink" href="#restfull-api-with-nodejs-express-mvc-mysql" title="Permanent link"></a></h1>
+<p>A <a href="http://www.sublimetext.com">Sublime Text 2/3</a> project to train people who is new developer about RestAPI and NodeJS .</p>
+<h5 id="main-features">Main Features<a class="headerlink" href="#main-features" title="Permanent link"></a></h5>
+<ol>
+<li><em>NodeJS</em> is a popular backend programming language with JS</li>
+<li><em>MVC</em> is a design pattern to seperate codes as Model, View, Controller</li>
+<li><em>Express</em> is a routing module for NodeJS.</li>
+<li><em>MySQL</em> is a Database Client for RDMS.</li>
+</ol>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h2>
+<h3 id="nodejs">NodeJS<a class="headerlink" href="#nodejs" title="Permanent link"></a></h3>
+<p>Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.</p>
+<h5 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link"></a></h5>
+<p>First of all, you need to node.js PPA in our system provides by Nodejs official website. We also need to install python-software-properties package if not installed already. You can choose either to install Latest Node.js version or LTS version.</p>
+<div class="codehilite"><pre><span class="nv">$ </span>sudo apt-get install curl python-software-properties
+<span class="nv">$ </span>curl -sL https://deb.nodesource.com/setup_10.x <span class="p">|</span> sudo bash -
+</pre></div>
+
+<p>Secondly , we must install NodeJS and NPM . NPM will be installed with NodeJS.</p>
+<div class="codehilite"><pre><span class="nv">$ </span>sudo apt-get install nodejs
+</pre></div>
+
+<h5 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link"></a></h5>
+<p>Please to install on Windows , follow the offical <a href="https://nodejs.org/en/download/current/">download page</a>.</p>
+<h3 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link"></a></h3>
+<p>MySQL, the most popular Open Source SQL database management system, is developed, distributed, and supported by Oracle Corporation.
+The MySQL <a href="http://www.mysql.com/">website</a> provides the latest information about MySQL software.</p>
+<h5 id="linux_1">Linux<a class="headerlink" href="#linux_1" title="Permanent link"></a></h5>
+<p>For simplicity and clarity, we will install the package application called XAMPP in the setup. This application will install basic components for MySQL server.</p>
+<p>To install,</p>
+<ol>
+<li>Open the XAMPP official <a href="https://www.apachefriends.org/tr/index.html">download page</a>.</li>
+<li>Select installer for your OS, installation will start automatically.</li>
+<li>Go to Download Folder and extract compresed files.</li>
+<li>Change this folder&rsquo;s permission to 777 . ( May using terminal is more efficient !)</li>
+<li>To start installer (in the same destination with installer),</li>
+</ol>
+<div class="codehilite"><pre><span class="nv">$ </span>sudo ./xammp-installer-name
+</pre></div>
+
+<h5 id="windows_1">Windows<a class="headerlink" href="#windows_1" title="Permanent link"></a></h5>
+<p>For simplicity and clarity, we will install the package application called XAMPP in the setup. This application will install basic components for MySQL server.</p>
+<p>To install,</p>
+<ol>
+<li>Open the XAMPP official <a href="https://www.apachefriends.org/tr/index.html">download page</a>.</li>
+<li>Select installer for your OS, installation will start automatically.</li>
+<li>Go to Download Folder and start installer.</li>
+</ol>
+<h2 id="preparing-the-application">Preparing the Application<a class="headerlink" href="#preparing-the-application" title="Permanent link"></a></h2>
+<h4 id="nodejs-and-application-server">NodeJS and Application Server<a class="headerlink" href="#nodejs-and-application-server" title="Permanent link"></a></h4>
+<h5 id="linux_2">Linux<a class="headerlink" href="#linux_2" title="Permanent link"></a></h5>
+<p>After clone or download this repos,</p>
+<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">cd </span>path/for/application<span class="se">\f</span>older
+<span class="nv">$ </span>npm install
+</pre></div>
+
+<p>To run NodeJS server,</p>
+<div class="codehilite"><pre><span class="nv">$ </span>npm start
+</pre></div>
+
+<h5 id="windows_2">Windows<a class="headerlink" href="#windows_2" title="Permanent link"></a></h5>
+<p>After clone or download this repos,
+With CMD,</p>
+<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">cd </span>path/for/application<span class="se">\f</span>older
+<span class="nv">$ </span>npm install
+</pre></div>
+
+<p>To run NodeJS server,</p>
+<div class="codehilite"><pre><span class="nv">$ </span>npm start
+</pre></div>
+
+<h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link"></a></h4>
+<p>A sample data set is provided with the application. You just import the database to your MySQL Servers.</p>
+<p>To import the databases ( both of OS are in the same ) ,</p>
+<ol>
+<li>Please run XAMPP</li>
+<li>Please turn on Apache and MySQL Servers in XAMPP Control Panel (just click on &lsquo;Start&rsquo; button and waiting for being online)</li>
+<li>Open any Internet browser and go to &lsquo;localhost/phpmyadmin&rsquo;</li>
+<li>Create a database which named same with provided database ( in /database )</li>
+<li>Select created database and go to Import page.</li>
+<li>Import the provided database.</li>
+</ol></article></body></html>
