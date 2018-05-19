@@ -81,14 +81,8 @@ After clone or download this repos,
 
 
 ```shell
-$ cd path/for/application\folder
+$ cd path/for/application/folder
 $ npm install
-```
-
-To run NodeJS server,
-
-```shell
-$ npm start
 ```
 
 ##### Windows
@@ -97,14 +91,8 @@ After clone or download this repos,
 With CMD,
 
 ```shell
-$ cd path/for/application\folder
+$ cd path/for/application/folder
 $ npm install
-```
-
-To run NodeJS server,
-
-```shell
-$ npm start
 ```
 
 #### Database
@@ -120,3 +108,27 @@ To import the databases ( both of OS are in the same ) ,
 5. Select created database and go to Import page.
 6. Import the provided database.
 
+## Start Server and Application
+
+##### Linux
+
+To start server ,
+
+1. Open Terminal
+2. Go to application folder and start server,
+
+```shell
+$ cd path/for/application/folder
+$ npm start
+```
+##### Windows
+
+To start server ,
+
+1. Open CMD
+2. Go to application folder and start server,
+
+```shell
+$ cd path/for/application/folder
+$ npm start
+```
