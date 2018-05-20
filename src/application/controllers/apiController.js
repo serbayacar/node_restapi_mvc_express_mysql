@@ -7,7 +7,7 @@ module.exports.getCountries =  function(req, res) {
     whereQuery = whereBuilder(req)
 
 
-    dbModel.customQuery("SELECT * FROM ulke " + whereQuery,function (err, result){ 
+    dbModel.customQuery("SELECT * FROM country " + whereQuery,function (err, result){ 
         if (err) throw err;                    
         res.json(result);
 
@@ -20,9 +20,9 @@ module.exports.getCity =  function(req, res) {
     whereQuery = whereBuilder(req)
 
     //Select with customization query
-    dbModel.customQuery("SELECT i.Id il_id,u.id ulke_id, i.IlAdi, u.UlkeAdi, u.tr_TR, u.en_US FROM il i " + 
-                        "inner join ulke u " +
-                        "WHERE u.Id=i.UlkeId " + whereQuery,function (err, result){
+    dbModel.customQuery("SELECT c.Id city_id,u.id country_id, c.cityName, u.countryName, u.tr_TR, u.en_US FROM cities c " + 
+                        "inner join country u " +
+                        "WHERE u.Id=c.countryId " + whereQuery,function (err, result){
         if (err) throw err;                    
         res.json(result);
 
@@ -48,11 +48,11 @@ function whereBuilder(req){
     }
 
     // customization with country name
-    if(  "ulke" in variables ){
+    if(  "country" in variables ){
         if(first=0){
-            query += "WHERE UlkeAdi LIKE '%"+ variables.ulke +"%'";
+            query += "WHERE countryName LIKE '%"+ variables.country +"%'";
         }else{
-            query += "and UlkeAdi LIKE '%"+ variables.ulke +"%'";
+            query += "and countryName LIKE '%"+ variables.country +"%'";
         }
         
     }

@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cities` (
   `Id` int(11) NOT NULL,
   `cityName` varchar(255) DEFAULT NULL,
-  `countryName` int(11) DEFAULT NULL,
+  `countryId` int(11) DEFAULT NULL,
   `priority` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin5;
 
@@ -39,7 +39,7 @@ CREATE TABLE `cities` (
 -- Dumping data for table `cities`
 --
 
-INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
+INSERT INTO `cities` (`Id`, `cityName`, `countryId`, `priority`) VALUES
 (1, 'Asâdâbâd', 1, 0),
 (2, 'Âybak', 1, 0),
 (3, 'Baghlân', 1, 0),
@@ -2086,7 +2086,7 @@ INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
 (2044, 'Lami', 69, 0),
 (2045, 'Lautoka', 69, 0),
 (2046, 'Levuka', 69, 0);
-INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
+INSERT INTO `cities` (`Id`, `cityName`, `countryId`, `priority`) VALUES
 (2047, 'Nadi', 69, 0),
 (2048, 'Nausori', 69, 0),
 (2049, 'Navouvalu', 69, 0),
@@ -4070,7 +4070,7 @@ INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
 (4027, 'Sûr', 115, 0),
 (4028, 'Tarâbulus ash-Sham', 115, 0),
 (4029, 'Zahlah', 115, 0);
-INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
+INSERT INTO `cities` (`Id`, `cityName`, `countryId`, `priority`) VALUES
 (4030, 'Butha Buthe', 116, 0),
 (4031, 'Hlotse', 116, 0),
 (4032, 'Mafeteng', 116, 0),
@@ -5980,7 +5980,7 @@ INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
 (5936, 'Móstoles', 194, 0),
 (5937, 'Murcia', 194, 0),
 (5938, 'Ourense', 194, 0);
-INSERT INTO `cities` (`Id`, `cityName`, `countryName`, `priority`) VALUES
+INSERT INTO `cities` (`Id`, `cityName`, `countryId`, `priority`) VALUES
 (5939, 'Oviedo', 194, 0),
 (5940, 'Palencia', 194, 0),
 (5941, 'Palma', 194, 0),
