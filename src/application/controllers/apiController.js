@@ -7,7 +7,9 @@ module.exports.getCountries =  function(req, res) {
     whereQuery = whereBuilder(req)
 
 
-    dbModel.customQuery("SELECT * FROM country " + whereQuery,function (err, result){ 
+    dbModel.customQuery("SELECT * FROM country c " + whereQuery,function (err, result){ 
+        console.log("SELECT * FROM country c " + whereQuery);
+
         if (err) throw err;                    
         res.json(result);
 
@@ -21,8 +23,10 @@ module.exports.getCity =  function(req, res) {
 
     //Select with customization query
     dbModel.customQuery("SELECT c.Id city_id,u.id country_id, c.cityName, u.countryName, u.tr_TR, u.en_US FROM cities c " + 
-                        "inner join country u " +
-                        "WHERE u.Id=c.countryId " + whereQuery,function (err, result){
+                        "inner join country u on u.Id=c.countryId " + whereQuery,function (err, result){
+        console.log("SELECT c.Id city_id,u.id country_id, c.cityName, u.countryName, u.tr_TR, u.en_US FROM cities c " + 
+                        "inner join country u on u.Id=c.countryId " + whereQuery);
+
         if (err) throw err;                    
         res.json(result);
 
@@ -39,20 +43,22 @@ function whereBuilder(req){
 
     // Select a spesific id numbers
     if(  "id" in variables ){
-        if(first=0){
-            query += "WHERE Id="+ variables.id +"";
+        if(first==0){
+            query += "WHERE c.Id="+ variables.id +"";
+            first=1;
         }else{
-            query += "and Id="+ variables.id +"";
+            query += "and c.Id="+ variables.id +"";
         }
         
     }
 
     // customization with country name
     if(  "country" in variables ){
-        if(first=0){
-            query += "WHERE countryName LIKE '%"+ variables.country +"%'";
+        if(first==0){
+            query += "WHERE u.countryName LIKE '%"+ variables.country +"%'";
+            first=1;
         }else{
-            query += "and countryName LIKE '%"+ variables.country +"%'";
+            query += "and u.countryName LIKE '%"+ variables.country +"%'";
         }
         
     }

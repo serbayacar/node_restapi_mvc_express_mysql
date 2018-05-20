@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH=/home/kali/Projects/NodeJs/node_restapi_mvc_express_mysql/virtual/lib/node_modules
+export NPM_CONFIG_PREFIX=/home/kali/Projects/NodeJs/node_restapi_mvc_express_mysql/virtual
+export npm_config_prefix=/home/kali/Projects/NodeJs/node_restapi_mvc_express_mysql/virtual
+exec virtual/bin/node "$@"
